@@ -1,11 +1,8 @@
-import Matrix from "./matrix.js";
-
-export default class World{
-    constructor(p,lines,columns){
-        this.p = p;
+class World{
+    constructor(lines,columns){
         this.lines = lines;
         this.columns = columns;
-        this.matrix = new Matrix(p,lines,columns);
+        this.matrix = new Matrix(lines,columns);
         this.blocks = {};
     }
     createBlock(id,image,color){
@@ -14,7 +11,7 @@ export default class World{
     drawWorld(matrix){
         for(var i = 0; i < this.lines; i++){
             for(var j = 0; j < this.columns; j++){
-                this.drawBlock(matrix[i][j],i,j);
+                this.drawBlock(matrix[i][j].terr,i,j);
             }
         }
     }
