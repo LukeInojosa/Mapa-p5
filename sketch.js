@@ -19,8 +19,8 @@ preload = function () {
     parede = loadImage("./image/terra.png")
 };
 setup = function () {
-    const lines = 10;
-    const columns = 10;
+    const lines = 20;
+    const columns = 20;
     //Seta as configuração da tela
     var div = document.getElementById("container");
     let height = Math.ceil(0.95*div.offsetHeight/lines)*lines;

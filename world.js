@@ -23,8 +23,6 @@ class World{
                 for(let i =0;i<color.length;i+=1){
                     new_color.push(block["color"][i] + color[i])
                 }
-                console.log(new_color.length)
-                console.log(new_color)
                 this.matrix.setBlock(block["image"],i,j,new_color);
             }
         }else{
