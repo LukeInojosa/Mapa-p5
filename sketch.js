@@ -25,7 +25,8 @@ setup = function () {
     var div = document.getElementById("container");
     let height = Math.ceil(0.95*div.offsetHeight/lines)*lines;
     let width = Math.ceil(0.95*div.offsetWidth/columns)*columns;
-    createCanvas(width,height);
+    var canvas = createCanvas(width,height);
+    canvas.parent("container");
 
     
     board = new Board(lines,columns)
