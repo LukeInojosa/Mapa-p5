@@ -28,10 +28,16 @@ class Board{
               this.board[i][j] = {coord: this.calc_coord(i, j), terr: this.board[i][j]};
             }
         }
-        this.target = [0,0]
+        this.target = this.set_target()
     }
-    set_target(i,j){
-        this.target = [i,j]
+    set_target(){
+        let i = Math.floor(this.screen.lines*Math.random())
+        let j = Math.floor(this.screen.columns*Math.random())
+        while (this.board[i][j].terr == WALL || this.board[i][j].terr == REMOV) {
+            i = Math.floor(this.screen.lines*Math.random())
+            j = Math.floor(this.screen.columns*Math.random())
+        }
+        return [i,j]
     }
     calc_coord(i,j){
         let dx = this.screen.matrix.dx;
