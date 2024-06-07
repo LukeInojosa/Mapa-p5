@@ -39,7 +39,7 @@ setup = function () {
     board.screen.drawWorld(board.board);
 };
 draw = function () {
-    board.screen.drawBlock(board.board[board.target[0]][board.target[1]].terr,board.target[0],board.target[1],[255,255,255]);
+    board.screen.drawBlock(board.board[board.target[0]][board.target[1]].terr,board.target[0],board.target[1],[80,80,0]);
     board.screen.drawBlock(TARGET,board.target[0],board.target[1]);
     
     if (locked){
